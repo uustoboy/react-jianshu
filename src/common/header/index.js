@@ -44,7 +44,7 @@ class Header extends Component{
               <CSSTransition
                 in={focuse}
                 timeout={200}
-                className="slide"
+                classNames="slide"
               >
                 <NavSearch 
                 onFocus={this.handleInputFocus} 

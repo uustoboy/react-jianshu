@@ -65,8 +65,17 @@ export const SearchWrapper = styled.div`
   .slide-enter{
     transition:all .2s ease-out;
   }
-  .slide-enter-{}
-
+  .slide-enter-active{
+    width:240px;
+    transition:all .2s ease-out;
+  }
+  .slide-exit{
+    transition:all .2s ease-out;
+  }
+  .slide-exit-active{
+    width:160px;
+    transition:all .2s ease-out;
+  }
 `;
 export const NavSearch = styled.input.attrs({
   placeholder: '搜索'
