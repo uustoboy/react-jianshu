@@ -21,7 +21,7 @@ export const Logo = styled.a.attrs({
 `;
 
 export const Nav = styled.div`
-  width:960px; 
+  width:960px;
   height:100%;
   padding:0 70px 0 0;
   box-sizing:border-box;
@@ -98,6 +98,41 @@ export const NavSearch = styled.input.attrs({
     width:240px;
   }
 `;
+export const SerchInfo = styled.div`
+         position: absolute;
+         left: 0;
+         top: 56px;
+         width: 240px;
+         padding: 0 20px;
+         box-shadow:0 0 8px rgba(0,0,0,.2);
+       `;
+export const SerchInfoTitle = styled.div`
+         margin:20px 0 15px 0;
+         line-height:20px;
+         font-size:14px;
+         color:#969696;
+        `;
+export const SerchInfoSwitch = styled.div`
+         float:right;
+         font-size:13px;
+       `;
+export const SerchInfoList = styled.div`
+         width:100%;
+         overflow: hidden;
+       `;
+
+export const SerchInfoItem = styled.a`
+         display: block;
+         float: left;
+         font-size: 12px;
+         line-height: 20px;
+         padding: 0 5px;
+         margin: 0 10px 15px 0;
+         border: 1px solid #ddd;
+         color: #787878;
+         border-radius: 3px;
+       `;
+
 export const Additin = styled.div`
   position: absolute;
   right:0;
@@ -121,6 +156,3 @@ export const Button = styled.div`
     background:#ec6149;
   }
 `;
-
-
-
