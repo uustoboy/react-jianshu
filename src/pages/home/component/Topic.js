@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TopicWrapper,TopicItem } from '../style'; 
+import { TopicWrapper,TopicItem } from '../style';
 import { connect } from 'react-redux';
 
 class Topic extends Component {
@@ -11,7 +11,7 @@ class Topic extends Component {
           list.map((item) => (
               <TopicItem key={item.get('id')}>
                 <img
-                  className='topic-pic' src={item.get('imgUr')} />
+                  className='topic-pic' src={item.get('imgUr')} alt=''/>
                 {item.get('title')}
               </TopicItem>
             ))
@@ -21,15 +21,15 @@ class Topic extends Component {
   }
 }
 
-const mapState = (state)=>{
-  return {
+const mapState = (state)=>({
     list: state.getIn(["home", "topicList"])
-  }
-}
-const mapDispatch = (dispatch) => {
-  
-}
+});
+
+const mapDispatch = (dispatch) => ({
+
+});
 
 export default connect(
   mapState,
-  null)(Topic);
+  mapDispatch
+)(Topic);
