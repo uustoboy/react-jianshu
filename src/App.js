@@ -9,6 +9,9 @@ import store  from './store';
 
 import { BrowserRouter, Route } from 'react-router-dom';
 
+import Home from './pages/home';
+import Detail from './pages/detail';
+
 class App extends Component {
   render() {
     return (
@@ -18,8 +21,8 @@ class App extends Component {
         <Provider store={store}>
           <Header />
           <BrowserRouter>
-              <Route path="/" exact render={() => <div>home</div>} />
-              <Route path="/detail" exact render={() => <div>detail</div>} />
+            <Route path="/" exact component={Home}/>
+            <Route path="/detail" exact component={Detail}/>
           </BrowserRouter>
         </Provider>
         helllo world!
