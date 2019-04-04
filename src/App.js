@@ -10,7 +10,9 @@ import store  from './store';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import Home from './pages/home';
-import Detail from './pages/detail';
+import Detail from './pages/detail/loadable';
+import Login from './pages/login';
+import Write from './pages/write';
 
 class App extends Component {
   render() {
@@ -19,13 +21,15 @@ class App extends Component {
         <GlobalFontIco />
         <GlobalStyle />
         <Provider store={store}>
-          <Header />
+          
           <BrowserRouter>
+            <Header />
+            <Route path="/login" exact component={Login} />
             <Route path="/" exact component={Home}/>
-            <Route path="/detail" exact component={Detail}/>
+            <Route path="/detail/:id" exact component={Detail} />
+            <Route path="/write" exact component={Write} />
           </BrowserRouter>
         </Provider>
-        helllo world!
       </div>
     );
   }

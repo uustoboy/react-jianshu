@@ -6,11 +6,9 @@ export const HeaderWrapper = styled.div`
   width:100%;
   height:58px;
   border-bottom:1px solid #f0f0f0;
+  z-index:1;
 `
-export const Logo = styled.a.attrs({
-  href: "/",
-  title: "简书"
-})`;
+export const Logo = styled.div`;
   position: absolute;
   top:0;
   left:0;
